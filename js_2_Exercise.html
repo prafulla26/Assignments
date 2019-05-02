@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Limit character input in the textarea to 20 characters. Also the number of characters should get updated at the bottom while typing in the text.
+	</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>  
+
+</head>
+<body>
+
+	<textarea id="textarea" rows="3" cols="20" maxlength="20"></textarea>
+	<div id="textarea_response"></div>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var text_max_length = 20;
+			$("#textarea").keyup(function() {
+				var tex_length = $('#textarea').val().length;
+				var  text_remaining = text_max_length - tex_length;
+
+				$('#textarea_response').html(text_remaining + '  characters remaining');
+			});
+		});
+
+	</script>
+</body>
+</html>

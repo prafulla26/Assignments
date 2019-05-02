@@ -1,0 +1,45 @@
+<!DOCTYPE html> 
+<html> 
+    <head> 
+        <title>window open and close method</title>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>  
+        
+
+    </head> 
+    <body> 
+
+    	<div id="check">
+        <button onclick="windowOpen()">Open Google</button> 
+        <button onclick="windowClose()">Close Google</button> 
+        <button onclick="checkWindowClose()">Check Google still open ?</button>
+        </div> 
+
+
+
+        <script type="text/javascript"> 
+            var Window; 
+              
+            // Function that open the new Window 
+            function windowOpen() { 
+                Window = window.open("https://www.google.com/", 
+                                 "_blank", "width=400, height=450"); 
+            } 
+               
+            // function that Closes the open Window 
+            function windowClose() { 
+                Window.close(); 
+            }
+            function checkWindowClose(){
+
+            	if (!window) {
+            		document.getElementById("check").innerHTML = "window not opened";
+            	}else{
+            		 document.getElementById("check").innerHTML = "window was opened";
+
+            	}
+            }
+        </script> 
+
+    </body> 
+</html> 

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Set the focus to the first input box of a form.</title>
+		        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script> 
+
+</head>
+<body>
+
+	<form id="frm" action="#" method="post">
+		
+		Enter Name :- <input id="field1" type="text" name="pName"><br><br><br><br>
+		Enter City :- <input type="text" name="cityName"><br><br><br><br>	
+		  Submit:-  <input type="Submit" value="submit">
+
+	</form>
+
+
+	<script type="text/javascript">
+		
+		$(document).ready(function() {
+			
+			$("#field1").focus();
+		});
+
+
+	</script>
+
+</body>
+</html>

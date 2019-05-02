@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Delay the execution of subsequent items in the animation queue</title>
+	        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script> 
+
+</head>
+<body>
+	<button id="btn">Click</button>
+
+	<div id="firstDiv" style="background-color: yellow;height: 100px;width: 200px;display: none;"></div><br>
+	<div id="secondDiv" style="background-color: green;height: 100px;width: 200px;display: none;"></div><br>
+	<div id="thirdDiv" style="background-color: red;height: 100px;width: 200px;display: none;"></div><br>
+	<div id="fourthDiv" style="background-color: magenta;height: 100px;width: 200px;display: none;"></div><br>
+	<div id="fifthDiv" style="background-color: aqua;height: 100px;width: 200px;display: none;"></div><br>
+	<div id="sixthDiv" style="background-color: purple;height: 100px;width: 200px;display: none;"></div><br>
+	<div id="seventhDiv" style="background-color: blue;height: 100px;width: 200px;display: none;"></div><br>
+
+
+
+
+	<script type="text/javascript">
+		
+			$(document).ready(function() {
+				
+
+				$("#btn").click(function(event) {
+					
+					$("#firstDiv").delay('slow').fadeIn();
+					$("#secondDiv").delay(3000).fadeIn();
+					$("#thirdDiv").delay(5000).fadeIn();
+					$("#fourthDiv").delay(7000).fadeIn();
+					$("#fifthDiv").delay(9000).fadeIn();
+					$("#sixthDiv").delay(11000).fadeIn();
+					$("#seventhDiv").delay(13000).fadeIn();
+
+				});
+			});
+
+	</script>
+
+</body>
+</html>

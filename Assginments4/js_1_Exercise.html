@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Remove all spans from the html dom </title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script> 
+
+</head>
+<body>
+
+	<button id="removeSpan">remove span tag </button>
+
+	<div>
+		<span> Hello, this is first span text.</span>
+
+
+	</div>
+	<div>
+		<span> Hello, this is second span text.</span>
+
+		
+	</div>
+	<div>
+		<span> Hello, this is third span text.</span>
+
+		
+	</div>
+
+	<script type="text/javascript">
+		
+		$(document).ready(function() {
+
+
+			$("#removeSpan").click(function(event) {
+				
+				$(document).find('span').remove();
+			});
+			
+
+		});
+
+	</script>
+
+</body>
+</html>

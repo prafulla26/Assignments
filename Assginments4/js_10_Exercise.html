@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Add a new row dynamically to the table</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script> 
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+	
+	<button type="button" class="btn btn-success" id="addNewRow">Add new Row</button>
+	
+		<div class="tableDiv" id="tableDiv">
+
+		<table class="table" id="table">
+			<thead>
+				<tr>
+					<th scope="col">Sr. No.</th>
+					<th scope="col">Name</th>
+					<th scope="col">City</th>
+					<th scope="col">Country</th>
+				</tr>
+			</thead>
+			<tbody id="addNewRowToBody">
+				<tr>
+					<th scope="row">1</th>
+					<td>Ganesh</td>
+					<td>Banglore</td>
+					<td>India</td>
+				</tr>
+				<tr>
+					<th scope="row">2</th>
+					<td>Jacob</td>
+					<td>New York</td>
+					<td>America</td>
+				</tr>
+				<tr>
+					<th scope="row">3</th>
+					<td>Xian</td>
+					<td>Tokyo</td>
+					<td>Japan</td>
+				</tr>
+			</tbody>
+		</table>
+
+	</div>
+	
+		<script type="text/javascript">	
+			var num = 3;
+		$(document).ready(function() {
+			
+
+			
+			$("#addNewRow").click(function(event) {
+			    
+				
+				var name = "<input type='text' id='name' placeholder='Enter Name' style='border:none' />";
+				var city = "<input type='text' id='city' placeholder='Enter City' style='border:none' />";
+				var country = "<input type='' id='country' placeholder='Enter Country' style='border:none' />";
+
+
+			var rowContent = "<tr> <th scope='row'>"+ ++num +"</th><td>"+name+"</td><td>"+city+"</td><td>"+country+"</td></tr>";
+
+			$("#addNewRowToBody").append(rowContent);
+
+			});
+
+			$("#removeRow").click(function(event) {
+
+			  $("#addNewRowToBody tr:last").remove();
+				
+				
+			});
+
+		});	
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Remove row dynamically to the table</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script> 
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+	
+	
+	<button type="button" class="btn btn-danger" id="removeRow">Remove Row</button>
+		<div class="tableDiv" id="tableDiv">
+
+		<table class="table" id="table">
+			<thead>
+				<tr>
+					
+					<th scope="col">Name</th>
+					<th scope="col">City</th>
+					<th scope="col">Country</th>
+				</tr>
+			</thead>
+			<tbody id="addNewRowToBody">
+				<tr>
+					
+					<td>Ganesh</td>
+					<td>Banglore</td>
+					<td>India</td>
+				</tr>
+				<tr>
+					
+					<td>Jacob</td>
+					<td>New York</td>
+					<td>America</td>
+				</tr>
+				<tr>
+					
+					<td>Xian</td>
+					<td>Tokyo</td>
+					<td>Japan</td>
+				</tr>
+				<tr>
+					
+					<td>John</td>
+					<td>Torronto</td>
+					<td>Canada</td>
+				</tr>
+				<tr>
+					
+					<td>Sean</td>
+					<td>Mosco</td>
+					<td>Russia</td>
+				</tr>
+				<tr>
+					
+					<td>Chris</td>
+					<td>Paris</td>
+					<td>France</td>
+				</tr>
+			</tbody>
+		</table>
+
+	</div>
+	
+		<script type="text/javascript">	
+			var num = 3;
+		$(document).ready(function() {
+			
+
+			
+			$("#addNewRow").click(function(event) {
+			    
+				
+				var name = "<input type='text' id='name' placeholder='Enter Name' style='border:none' />";
+				var city = "<input type='text' id='city' placeholder='Enter City' style='border:none' />";
+				var country = "<input type='' id='country' placeholder='Enter Country' style='border:none' />";
+
+
+			
+
+			var rowContent = "<tr> "+ "<td>"+name+"</td><td>"+city+"</td><td>"+country+"</td></tr>";
+
+			$("#addNewRowToBody").append(rowContent);
+
+			});
+
+			$("#removeRow").click(function(event) {
+
+			  $("#addNewRowToBody tr:last").remove();
+				
+				
+			});
+
+		});	
+	</script>
+
+</body>
+</html>

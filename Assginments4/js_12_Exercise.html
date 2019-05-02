@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Change the text of input field to Title Case when user moves out of the text field</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script> 
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<style type="text/css">
+		.capitalize	{
+			text-transform: capitalize;
+		}
+	</style>
+</head>
+<body>
+	<div class="input-group">
+		<div class="input-group-prepend">
+			<span class="input-group-text">Title Case </span>
+		</div>
+		<textarea class="form-control" name="capitalizeText" aria-label="With textarea" id="titleCaseText"></textarea>
+	</div>
+
+	<script type="text/javascript">
+
+		$("[name='capitalizeText']").mouseleave(
+			()=>	{
+				$("[name='capitalizeText']").addClass("capitalize");
+			}
+			);
+		
+		</script>
+
+	</body>
+	</html>

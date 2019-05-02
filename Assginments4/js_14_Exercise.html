@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>When the user presses a key in the text field, a bootstrap style warning alert should come saying "Enter data in this field is prohibited!"</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script> 
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+
+<div class="input-group">
+		<div class="input-group-prepend">
+			<span class="input-group-text">Enter Text </span>
+		</div>
+		<textarea class="form-control" name="capitalizeText" aria-label="With textarea" id="prohibitedTextEntry"></textarea>
+	</div>
+
+<script type="text/javascript">
+	
+	$("textarea").keyup(
+		()=>{
+
+			alert("Enter data in this field is prohibited!!!!");
+			$("textarea").val("");
+		}
+	);
+</script>
+
+
+</body>
+</html>

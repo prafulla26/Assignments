@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Move an element from one DIV to another.</title>
+	        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script> 
+
+</head>
+<body>
+	<button id="btnToMove"> Move first div para to second div</button>
+
+	<div id="firstDiv" style="background-color: aqua;height: 100px;">
+		
+		<p id="para"> This para belongs to first div </p>
+	</div>
+
+	<div id="secondDiv" style="background-color: yellow;height: 100px;">
+		
+		
+	</div>
+
+	<script type="text/javascript">
+		
+		$(document).ready(function() {
+
+			$("#btnToMove").click(function(event) {
+				
+				$("#para").appendTo('#secondDiv');
+			});
+			
+			
+
+		});
+	</script>
+
+</body>
+</html>

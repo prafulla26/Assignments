@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>On right click inside a div, make the div box larger</title>
+		        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script> 
+
+</head>
+<body>
+
+	<!-- <button id="btnForBox">click to increase box size</button> -->
+
+	<div id="div" style="100px;height: 100px; background-color: yellow;width: 100px;">
+		
+	</div>
+
+	<script type="text/javascript">
+		
+
+
+
+		$(document).ready(function() {
+
+			 document.oncontextmenu = function() {return false;};
+			
+				$("#div").mousedown(function(event) {
+					
+
+					if (event.button == 2) {
+
+						alert("right");
+					 
+					 $("#div").css({
+					 	height: '300px',
+					 	width: '300px'
+
+					 	
+					 });
+
+					 return false;
+					}
+					return true;
+				});
+
+		});
+	</script>
+
+</body>
+</html>
