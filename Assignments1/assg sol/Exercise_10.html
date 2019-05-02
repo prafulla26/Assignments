@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>check string or not</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		
+
+    is_string = function(input) {
+  if (Object.prototype.toString.call(input) === '[object String]')
+    return true;
+  else
+    return false;   
+    };
+console.log(is_string('w3resource'));
+console.log(is_string([1, 2, 4, 0]));
+	</script>
+
+</body>
+</html>

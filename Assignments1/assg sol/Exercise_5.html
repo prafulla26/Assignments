@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>longest word in string</title>
+</head>
+<body>
+
+
+<script type="text/javascript">
+	
+    
+  var string = prompt("enter the string ");
+    
+    var output = longestWord(string);
+    
+    console.log(output);
+
+   
+
+function longestWord(string){
+
+var splittedString = string.split(" ")
+var longest = 0;
+var word = null;
+
+
+
+  for (var i = 0; i <= splittedString.length - 1; i++) {
+
+     if ( longest < splittedString[i].length) {
+
+     	longest = splittedString[i].length;
+
+     	word =splittedString[i];
+     }
+
+
+  	  }
+
+  	  return word;
+
+}
+
+
+
+</script>
+</body>
+</html>

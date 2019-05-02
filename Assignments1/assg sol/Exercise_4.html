@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Capitalize first letter of each word </title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		
+		function capitalizeFirstLetter(str){
+    
+          var str = str.toLowerCase().split(' ')
+
+           for (var i = 0; i < str.length; i++) {
+
+           	str[i] = str[i].charAt(0).toUpperCase() + str[i].substring(1);
+           }
+
+           return str.join(' ')
+
+        }
+
+      // take input
+      
+      var string = prompt("Enter a string ",);
+      var capitalFormat =   capitalizeFirstLetter(string);
+
+        
+
+        alert(capitalFormat);
+
+
+
+
+
+
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>merge two array remove duplicates</title>
+</head>
+<body>
+<script type="text/javascript">
+	
+
+
+	function filter(array){
+
+		var first = array.concat();
+
+		for (var i = 0; i < first.length; i++) {
+			
+			for (var j = i+1; j < first.length; ++j) {
+
+					if(first[i]== first[j])
+						first.splice(j--, 1);
+
+			}
+		}
+
+
+		return first;
+	}
+
+		var arr1 = ["Ganesh","Singh","ABC"];
+		var arr2 = ["PQR","ABC","XYZ"];
+
+		var arr3 = filter(arr1.concat(arr2));
+
+		console.log(arr3);
+
+
+</script>
+</body>
+</html>
